@@ -1,0 +1,30 @@
+﻿<Window x:Class="milliomos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:milliomos"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+	<Grid Background="DarkBlue">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<TextBlock x:Name="tb_kerdes" Grid.Row="0" FontSize="72" FontFamily="Impact"  Height="250" Margin="20"  Background="WhiteSmoke" TextWrapping="WrapWithOverflow"/>
+		<Grid Grid.Row="1">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			<Button x:Name="btn_A" Grid.Column="0" Grid.Row="0" Margin="5" FontFamily="Impact" FontSize="24" Click="btn_Click"/>
+			<Button x:Name="btn_B" Grid.Column="1" Grid.Row="0" Margin="5" FontFamily="Impact" FontSize="24" Click="btn_Click"/>
+			<Button x:Name="btn_C" Grid.Column="0" Grid.Row="1" Margin="5" FontFamily="Impact" FontSize="24" Click="btn_Click"/>
+			<Button x:Name="btn_D" Grid.Column="1" Grid.Row="1" Margin="5" FontFamily="Impact" FontSize="24" Click="btn_Click"/>
+		</Grid>
+	</Grid>
+</Window>
