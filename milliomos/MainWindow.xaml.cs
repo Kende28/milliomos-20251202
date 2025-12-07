@@ -33,13 +33,16 @@ namespace milliomos
 
 		private void Beolvas(string file)
 		{
-			StreamReader sr = new StreamReader(file);
-			while (!sr.EndOfStream)
-			{
-				var data = sr.ReadLine().Split(";");
-				Kerdes newKerdes = new Kerdes(data[0], data[1], data[2], data[3], data[4], data[5]);
-				osszes.Add(newKerdes);
-			}
+            if (File.Exists(file))
+            {
+                StreamReader sr = new StreamReader(file);
+                while (!sr.EndOfStream)
+                {
+                    var data = sr.ReadLine().Split(";");
+                    Kerdes newKerdes = new Kerdes(data[0], data[1], data[2], data[3], data[4], data[5]);
+                    osszes.Add(newKerdes);
+                }
+            }    
 		}
 
 		private void Start()
